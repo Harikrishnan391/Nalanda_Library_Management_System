@@ -107,7 +107,7 @@ export const BorrowBook = async (req, res) => {
     book.availableCopies -= 1;
     await book.save();
 
-    res.status(HttpStatusCodes.OK).json({
+    res.status(HttpStatusCodes.CREATED).json({
       success: true,
       message: "Book borrowed successfully",
       data: borrowRecord,
