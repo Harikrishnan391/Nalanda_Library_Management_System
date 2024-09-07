@@ -92,3 +92,9 @@ export const logout = (req, res) => {
     res.status(HttpStatusCodes.INTERNAL_SERVER_ERROR).json({ message: "Logout failed" });
   }
 };
+
+
+export const TestRequest=async()=>{
+
+       
+}

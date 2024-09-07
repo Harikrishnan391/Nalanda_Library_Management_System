@@ -5,14 +5,17 @@ import Borrow from "../models/BorrowSchema.js";
 import moment from "moment";
 
 // Handles listing books with optional filters and pagination
-export const ListBooks = async (req, res) => {
+export const  ListBooks = async (req, res) => {
+
   try {
     const { genre, author, page = 1, limit = 5 } = req.query;
 
     // Parse page and limit query parameters
     const pageNumber = parseInt(page, 10);
+    console.log(pageNumber)
     const limitNumber = parseInt(limit, 10);
 
+    console.log(limitNumber)
     // Validate page and limit values
     if (pageNumber <= 0 || limitNumber <= 0) {
       return res.status(HttpStatusCodes.BAD_REQUEST).json({

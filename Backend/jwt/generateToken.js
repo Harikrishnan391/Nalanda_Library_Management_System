@@ -11,7 +11,7 @@ const generateToken = (userId, role, res) => {
       expiresIn: "30d",
     }
   );
-    console.log(token)
+   
     
   res.cookie("jwtuser", token, {
     httpOnly: true,
